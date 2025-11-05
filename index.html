@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kusirest - Descansa cómodamente entre clases. Cuartos de descanso por horas para estudiantes.">
+    <meta name="keywords" content="descanso, estudiantes, cuartos, siesta, universidad">
+    <title>Kusirest - Descansa cómodamente entre clases</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Banner de navegación fijo -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+     <img src="assets/logo.png" alt="Kusirest Logo" class="logo-personalizado" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';">
+      <span class="logo-text">KUSIREST</span>
+        <!-- Fallback si no tienes logo -->
+        <div class="logo-placeholder" style="display: none;">
+         <span class="logo-text-large">KUSIREST</span>
+          </div>
+       </div>
+    <nav class="nav-menu">
+    <a href="#inicio" class="nav-link">Inicio</a>
+         <a href="#cuartos" class="nav-link" id="cuartos-link">Cuartos</a>
+         <a href="#historial" class="nav-link" id="historial-link">Historial</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
+            <div class="user-menu">
+       <button class="login-btn" id="loginBtn">
+        <i class="fas fa-user"></i> Iniciar Sesión
+    </button>
+         <div class="user-info" id="userInfo" style="display: none;">
+    <span id="userName"></span>
+                <button class="logout-btn" id="logoutBtn">
+       <i class="fas fa-sign-out-alt"></i>
+   </button>
+     </div>
+           <div class="cart-icon" id="cartIcon">
+ <i class="fas fa-shopping-cart"></i>
+           <span class="cart-count" id="cartCount">0</span>
+        </div>
+       </div>
+</nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Inicio (Hero) -->
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+     <h1 class="hero-title">Descansa cómodamente entre clases</h1>
+                <p class="hero-description">Tu espacio de descanso perfecto para el ritmo universitario</p>
+                <button class="cta-button" onclick="navegarACuartos()">
+            Reservar cuarto
+                </button>
+   </div>
+        </section>
+
+        <!-- Sección Nosotros -->
+      <section id="nosotros" class="nosotros">
+         <div class="container">
+  <h2 class="section-title">Nosotros</h2>
+       <p class="section-intro">
+              En Kusirest entendemos que los estudiantes necesitan espacios de descanso de calidad durante 
+     sus jornadas académicas. Ofrecemos cuartos especialmente diseñados para proporcionar el 
+        descanso perfecto entre clases, ayudándote a recargar energías y mejorar tu rendimiento académico.
+          </p>
+       
+    <div class="mision-vision">
+         <div class="card card-hover">
+    <div class="card-icon">
+         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--primario)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     <path d="M2 17L12 22L22 17" stroke="var(--primario)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M2 12L12 17L22 12" stroke="var(--primario)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>
+          </div>
+       <h3>Misión</h3>
+      <p>
+          Proporcionar espacios de descanso seguros, cómodos y accesibles para estudiantes 
+     universitarios, mejorando su bienestar y rendimiento académico a través de un 
+     descanso de calidad.
+       </p>
+         </div>
+
+          <div class="card card-hover">
+      <div class="card-icon">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 12S4 4 12 4S23 12 23 12S20 20 12 20S1 12 1 12Z" stroke="var(--primario)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="12" cy="12" r="3" stroke="var(--primario)" stroke-width="2"/>
+     </svg>
+        </div>
+          <h3>Visión</h3>
+             <p>
+   Ser el referente en servicios de descanso universitario, expandiendo nuestro 
+           modelo a todas las universidades del país y contribuyendo al bienestar integral 
+       de la comunidad estudiantil.
+           </p>
+      </div>
+     </div>
+    </div>
+        </section>
+
+        <!-- Sección Cuartos -->
+        <section id="cuartos" class="cuartos section-oculta">
+            <div class="container">
+                <h2 class="section-title">Cuartos Disponibles</h2>
+       
+         <!-- Estadísticas -->
+     <div class="stats-container">
+       <div class="stat-card">
+        <div class="stat-icon">
+      <i class="fas fa-bed"></i>
+       </div>
+   <div class="stat-info">
+    <h3 id="cuartosDisponibles">8</h3>
+    <p>Disponibles</p>
+  </div>
+          </div>
+        <div class="stat-card">
+     <div class="stat-icon">
+       <i class="fas fa-lock"></i>
+      </div>
+          <div class="stat-info">
+           <h3 id="cuartosOcupados">4</h3>
+  <p>Ocupados</p>
+            </div>
+      </div>
+             </div>
+
+         <!-- Filtros -->
+          <div class="filtros-container">
+        <button class="filtro-btn active" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="disponibles">Disponibles</button>
+       <button class="filtro-btn" data-filtro="premium">Premium</button>
+    </div>
+
+          <!-- Grid de Cuartos -->
+                <div class="cuartos-grid" id="cuartosGrid">
+<!-- Los cuartos se cargarán dinámicamente aquí -->
+    </div>
+            </div>
+        </section>
+
+ <!-- Sección Historial -->
+        <section id="historial" class="historial section-oculta">
+       <div class="container">
+   <h2 class="section-title">Historial de Reservas</h2>
+    
+      <!-- Filtros de Historial -->
+           <div class="filtros-historial">
+    <button class="filtro-historial active" data-estado="todas">Todas</button>
+       <button class="filtro-historial" data-estado="activas">Activas</button>
+               <button class="filtro-historial" data-estado="completadas">Completadas</button>
+   <button class="filtro-historial" data-estado="canceladas">Canceladas</button>
+     </div>
+
+                <!-- Lista de Reservas -->
+                <div class="reservas-container" id="reservasContainer">
+              <div class="no-reservas">
+<i class="fas fa-calendar-times"></i>
+      <p>No tienes reservas aún. ¡Haz tu primera reserva!</p>
+    </div>
+</div>
+            </div>
+ </section>
+
+        <!-- Sección Contacto -->
+      <section id="contacto" class="contacto">
+            <div class="container">
+    <h2 class="section-title">Contacto</h2>
+      <p class="contacto-intro">
+  ¿Eres estudiante y deseas descansar durante los huecos de tu horario? 
+ Prueba nuestros cuartos de sueño.
+        </p>
+      
+     <form class="contacto-form" onsubmit="event.preventDefault(); mostrarMensajeEnvio();">
+   <div class="form-row">
+     <div class="form-group">
+       <label for="nombre">Nombre y Apellido *</label>
+      <input type="text" id="nombre" name="nombre" required>
+  </div>
+   <div class="form-group">
+ <label for="telefono">Teléfono *</label>
+   <input type="tel" id="telefono" name="telefono" required>
+  </div>
+        </div>
+      
+         <div class="form-group">
+      <label for="correo">Correo Electrónico *</label>
+   <input type="email" id="correo" name="correo" required>
+     </div>
+   
+        <div class="form-group">
+       <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+    </div>
+            
+  <button type="submit" class="submit-button">Enviar</button>
+   </form>
+  
+  <div class="social-banner">
+      <span>Síguenos</span>
+        <a href="https://www.instagram.com/kusirest/" target="_blank" class="instagram-link" aria-label="Síguenos en Instagram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" stroke="white" stroke-width="2"/>
+   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/>
+         </svg>
+   </a>
+            </div>
+  </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+     <span>&copy; 2025 KUSIREST - Descansa cómodamente entre clases.</span>
+   </div>
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <!-- Modal Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Iniciar Sesión</h3>
+   <form id="loginForm">
+       <div class="form-group">
+ <label for="loginEmail">Correo Electrónico</label>
+     <input type="email" id="loginEmail" required>
+         </div>
+         <div class="form-group">
+    <label for="loginPassword">Contraseña</label>
+   <input type="password" id="loginPassword" required>
+ </div>
+      <button type="submit" class="submit-button">Iniciar Sesión</button>
+       <p class="switch-form">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+            </form>
+</div>
+    </div>
+
+    <!-- Modal Register -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+       <h3>Registro</h3>
+            <form id="registerForm">
+        <div class="form-group">
+            <label for="registerEmail">Correo Electrónico</label>
+          <input type="email" id="registerEmail" required>
+          </div>
+     <div class="form-group">
+           <label for="registerPassword">Contraseña</label>
+              <input type="password" id="registerPassword" required>
+       </div>
+      <div class="form-group">
+       <label for="registerName">Nombre Completo</label>
+    <input type="text" id="registerName" required>
+       </div>
+      <button type="submit" class="submit-button">Registrarse</button>
+         <p class="switch-form">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+            </form>
+ </div>
+    </div>
+
+    <!-- Modal Carrito -->
+  <div id="cartModal" class="modal">
+      <div class="modal-content">
+     <button class="modal-close">&times;</button>
+            <h3>Carrito de Reservas</h3>
+         <div id="cartItems">
+    <p class="empty-cart">Tu carrito está vacío</p>
+       </div>
+          <div class="cart-footer">
+    <div class="cart-total">
+        <strong>Total: S/ <span id="cartTotal">0</span></strong>
+                </div>
+     <button id="confirmReservation" class="submit-button" style="display: none;">
+             Confirmar Reserva
+              </button>
+   </div>
+        </div>
+    </div>
+
+    <!-- Overlay para modales -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
