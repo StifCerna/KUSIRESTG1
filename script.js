@@ -1,21 +1,21 @@
-// Estado de la aplicación - TODO TEMPORAL (se borra al cerrar navegador)
+// Estado de la aplicaciÃ³n - TODO TEMPORAL (se borra al cerrar navegador)
 const AppState = {
     currentUser: null,
     currentSection: 'inicio',
     cart: [],
     cuartos: [
-        { id: 1, nombre: 'Cuarto A-101', estado: 'disponible', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Aire Acondicionado', 'Enchufes'] },
-        { id: 2, nombre: 'Cuarto A-102', estado: 'ocupado', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
-    { id: 3, nombre: 'Cuarto B-201', estado: 'disponible', tipo: 'premium', precio: 20, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama King', 'TV Smart', 'Minibar', 'Aire Acondicionado'] },
-        { id: 4, nombre: 'Cuarto B-202', estado: 'disponible', tipo: 'premium', precio: 20, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama King', 'TV Smart', 'Jacuzzi', 'Aire Acondicionado'] },
-        { id: 5, nombre: 'Cuarto C-301', estado: 'disponible', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Escritorio', 'Enchufes'] },
-   { id: 6, nombre: 'Cuarto C-302', estado: 'ocupado', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
-     { id: 7, nombre: 'Cuarto D-401', estado: 'disponible', tipo: 'premium', precio: 20, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite', 'TV Smart', 'Minibar', 'Vista Panorámica'] },
-        { id: 8, nombre: 'Cuarto D-402', estado: 'disponible', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Aire Acondicionado', 'Enchufes'] },
-        { id: 9, nombre: 'Cuarto E-501', estado: 'ocupado', tipo: 'premium', precio: 20, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite Ejecutiva', 'TV Smart', 'Jacuzzi', 'Servicio 24h'] },
-        { id: 10, nombre: 'Cuarto E-502', estado: 'disponible', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
-        { id: 11, nombre: 'Cuarto F-601', estado: 'disponible', tipo: 'premium', precio: 20, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite Premium', 'TV Smart', 'Minibar', 'Balcón'] },
-        { id: 12, nombre: 'Cuarto F-602', estado: 'ocupado', tipo: 'normal', precio: 15, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Escritorio', 'Enchufes'] }
+        { id: 1, nombre: 'Cuarto A-101', estado: 'disponible', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Aire Acondicionado', 'Enchufes'] },
+        { id: 2, nombre: 'Cuarto A-102', estado: 'ocupado', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
+    { id: 3, nombre: 'Cuarto B-201', estado: 'disponible', tipo: 'premium', precio: 18, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama King', 'TV Smart', 'Minibar', 'Aire Acondicionado'] },
+        { id: 4, nombre: 'Cuarto B-202', estado: 'disponible', tipo: 'premium', precio: 18, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama King', 'TV Smart', 'Jacuzzi', 'Aire Acondicionado'] },
+        { id: 5, nombre: 'Cuarto C-301', estado: 'disponible', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Escritorio', 'Enchufes'] },
+   { id: 6, nombre: 'Cuarto C-302', estado: 'ocupado', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
+     { id: 7, nombre: 'Cuarto D-401', estado: 'disponible', tipo: 'premium', precio: 18, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite', 'TV Smart', 'Minibar', 'Vista PanorÃ¡mica'] },
+        { id: 8, nombre: 'Cuarto D-402', estado: 'disponible', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Aire Acondicionado', 'Enchufes'] },
+        { id: 9, nombre: 'Cuarto E-501', estado: 'ocupado', tipo: 'premium', precio: 18, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite Ejecutiva', 'TV Smart', 'Jacuzzi', 'Servicio 24h'] },
+        { id: 10, nombre: 'Cuarto E-502', estado: 'disponible', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'TV', 'Enchufes'] },
+        { id: 11, nombre: 'Cuarto F-601', estado: 'disponible', tipo: 'premium', precio: 18, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Suite Premium', 'TV Smart', 'Minibar', 'BalcÃ³n'] },
+        { id: 12, nombre: 'Cuarto F-602', estado: 'ocupado', tipo: 'normal', precio: 13, imagen: 'assets/cuarto.jpg', servicios: ['WiFi', 'Cama', 'Escritorio', 'Enchufes'] }
     ],
     reservas: [],
     usuarios: []
@@ -28,17 +28,17 @@ const DEFAULT_USER = {
     name: 'Usuario Kusirest'
 };
 
-// ÚNICA inicialización - NO DUPLICAR
+// ÃšNICA inicializaciÃ³n - NO DUPLICAR
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('?? Inicializando aplicación...');
+    console.log('?? Inicializando aplicaciÃ³n...');
     
     // Reset inicial
     AppState.currentUser = null;
     
-    // Configurar navegación con scroll
+    // Configurar navegaciÃ³n con scroll
     setupScrollNavigation();
     
-    // Inicializar aplicación
+    // Inicializar aplicaciÃ³n
     initApp();
 });
 
@@ -60,7 +60,7 @@ function initApp() {
     updateStats();
     updateUserInterface();
     
-    console.log('? Aplicación inicializada correctamente');
+    console.log('? AplicaciÃ³n inicializada correctamente');
 }
 
 function mostrarSeccionesIniciales() {
@@ -71,7 +71,7 @@ function mostrarSeccionesIniciales() {
     document.getElementById('historial').style.display = 'none';
 }
 
-// ========== NAVEGACIÓN ==========
+// ========== NAVEGACIÃ“N ==========
 function setupNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -105,7 +105,7 @@ function navigateToSection(sectionId) {
         document.getElementById('nosotros').style.display = 'none';
         document.getElementById('contacto').style.display = 'none';
    
-        // Mostrar sección solicitada
+        // Mostrar secciÃ³n solicitada
         document.getElementById('cuartos').style.display = sectionId === 'cuartos' ? 'block' : 'none';
         document.getElementById('historial').style.display = sectionId === 'historial' ? 'block' : 'none';
         
@@ -126,7 +126,7 @@ function navegarACuartos() {
     navigateToSection('cuartos');
 }
 
-// ========== NAVEGACIÓN CON SCROLL (SEPARADA) ==========
+// ========== NAVEGACIÃ“N CON SCROLL (SEPARADA) ==========
 function setupScrollNavigation() {
     const navbar = document.getElementById('navbar');
     
@@ -138,7 +138,7 @@ function setupScrollNavigation() {
         }
     });
     
-    // Solo para navegación de scroll suave (inicio, nosotros, contacto)
+    // Solo para navegaciÃ³n de scroll suave (inicio, nosotros, contacto)
     const scrollNavLinks = document.querySelectorAll('a[href="#inicio"], a[href="#nosotros"], a[href="#contacto"]');
  
     scrollNavLinks.forEach(link => {
@@ -165,9 +165,9 @@ document.getElementById('historial').style.display = 'none';
     });
 }
 
-// ========== AUTENTICACIÓN ==========
+// ========== AUTENTICACIÃ“N ==========
 function setupAuth() {
-    console.log('?? Configurando autenticación...');
+    console.log('?? Configurando autenticaciÃ³n...');
     
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
@@ -288,7 +288,7 @@ alert('Registro exitoso! (Temporal)');
 }
 
 function handleLogout() {
-    console.log('?? Cerrando sesión...');
+    console.log('?? Cerrando sesiÃ³n...');
     
     AppState.currentUser = null;
     AppState.cart = [];
@@ -301,7 +301,7 @@ function handleLogout() {
     alert('Sesion cerrada correctamente');
 }
 
-// FUNCIÓN CRÍTICA: Actualizar interfaz de usuario
+// FUNCIÃ“N CRÃTICA: Actualizar interfaz de usuario
 function updateUserInterface() {
     console.log('?? Actualizando interfaz de usuario...');
     
@@ -345,7 +345,7 @@ function updateUserInterface() {
             historialLink.style.cursor = 'not-allowed';
         }
       
-        // Forzar mostrar solo secciones públicas
+        // Forzar mostrar solo secciones pÃºblicas
         mostrarSeccionesIniciales();
     }
     
@@ -358,7 +358,7 @@ function renderCuartos(filtro = 'todos') {
     
     const grid = document.getElementById('cuartosGrid');
     if (!grid) {
-        console.error('? No se encontró cuartosGrid');
+        console.error('? No se encontrÃ³ cuartosGrid');
 return;
     }
     
@@ -422,7 +422,7 @@ function updateStats() {
     const disponibles = AppState.cuartos.filter(c => c.estado === 'disponible').length;
     const ocupados = AppState.cuartos.filter(c => c.estado === 'ocupado').length;
     
-    console.log('?? Estadísticas:', { disponibles, ocupados });
+    console.log('?? EstadÃ­sticas:', { disponibles, ocupados });
     
     const disponiblesElement = document.getElementById('cuartosDisponibles');
     const ocupadosElement = document.getElementById('cuartosOcupados');
@@ -492,7 +492,7 @@ function showCartModal() {
     if (!modal || !cartItems || !cartTotal || !confirmBtn) return;
     
     if (AppState.cart.length === 0) {
-    cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
+    cartItems.innerHTML = '<p class="empty-cart">Tu carrito estÃ¡ vacÃ­o</p>';
       confirmBtn.style.display = 'none';
         cartTotal.textContent = '0';
     } else {
@@ -533,7 +533,7 @@ function showCartModal() {
         <option value="19:00" ${item.horaFin === '19:00' ? 'selected' : ''}>19:00</option>
   </select>
     </div>
-             <p><strong>Duración:</strong> ${horas} hora${horas > 1 ? 's' : ''}</p>
+             <p><strong>DuraciÃ³n:</strong> ${horas} hora${horas > 1 ? 's' : ''}</p>
      <p><strong>Precio por hora:</strong> S/ ${item.precio}</p>
                 </div>
   <div style="display: flex; align-items: center; flex-direction: column; gap: 10px;">
@@ -669,7 +669,7 @@ function renderHistorial(filtroEstado = 'todas') {
         container.innerHTML = `
   <div class="no-reservas">
        <i class="fas fa-calendar-times"></i>
-     <p>No tienes reservas ${filtroEstado === 'todas' ? '' : filtroEstado} aún.</p>
+     <p>No tienes reservas ${filtroEstado === 'todas' ? '' : filtroEstado} aÃºn.</p>
             </div>
         `;
         return;
@@ -836,4 +836,5 @@ submitButton.disabled = true;
   } else {
         alert('Por favor completa todos los campos obligatorios');
     }
+
 }
