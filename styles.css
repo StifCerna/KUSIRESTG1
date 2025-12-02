@@ -1,6 +1,6 @@
 /* Variables CSS */
 :root {
-    --primario: #00AEEF;
+    --primario: #317B9A;
     --claro: #E6F9FF;
     --fondo: #FFFFFF;
     --texto: #222;
@@ -31,7 +31,7 @@ body {
     padding: 0 20px;
 }
 
-/* NavegaciÛn - M¡S COMPACTA */
+/* Navegaci√≥n - M√ÅS COMPACTA */
 .navbar {
     position: fixed;
     top: 0;
@@ -136,7 +136,7 @@ box-shadow: 0 2px 10px var(--sombra);
     width: 100%;
 }
 
-/* Men˙ de usuario */
+/* Men√∫ de usuario */
 .user-menu {
     display: flex;
     align-items: center;
@@ -195,7 +195,7 @@ box-shadow: 0 2px 10px var(--sombra);
     font-weight: bold;
 }
 
-/* SecciÛn Hero - CENTRADO PERFECTO */
+/* Secci√≥n Hero - CENTRADO PERFECTO */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('assets/inicio.jpg');
@@ -260,7 +260,7 @@ text-align: center;
     opacity: 1;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 174, 239, 0.4);
- margin: 0 auto; /* CENTRADO DEL BOT”N */
+ margin: 0 auto; /* CENTRADO DEL BOT√ìN */
     display: block; /* ASEGURAR QUE SE CENTRE */
 }
 
@@ -291,7 +291,7 @@ text-align: center;
     display: none;
 }
 
-/* SecciÛn Nosotros */
+/* Secci√≥n Nosotros */
 .nosotros {
     background: var(--gris-claro);
 }
@@ -334,7 +334,7 @@ transition: all 0.3s ease;
     line-height: 1.7;
 }
 
-/* EstadÌsticas */
+/* Estad√≠sticas */
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -642,7 +642,7 @@ color: var(--primario);
     color: var(--claro);
 }
 
-/* SecciÛn Contacto */
+/* Secci√≥n Contacto */
 .contacto {
     background: var(--claro);
 }
@@ -1068,4 +1068,5 @@ html {
 
 .modal-content:focus {
     outline: 2px solid var(--primario);
+
 }
